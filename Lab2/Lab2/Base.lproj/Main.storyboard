@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-fZ-6E1">
+                                <rect key="frame" x="40" y="35" width="240" height="219"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-J9-Xra">
+                                <rect key="frame" x="101" y="464" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HKq-7f-DeM"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Nf4-h3-gXN"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-mA-XSE">
+                                <rect key="frame" x="107" y="370" width="107" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4Bz-w9-1n6"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Album"/>
+                                    <segment title="Artist"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeInfo:" destination="vXZ-lx-hvc" eventType="valueChanged" id="qyy-c7-v1I"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weeknd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCM-O9-m2L">
+                                <rect key="frame" x="16" y="296" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oOk-Td-eNe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JmC-mA-XSE" firstAttribute="centerX" secondItem="MCM-O9-m2L" secondAttribute="centerX" id="57u-fO-TXQ"/>
+                            <constraint firstItem="MCM-O9-m2L" firstAttribute="top" secondItem="pjg-fZ-6E1" secondAttribute="bottom" constant="42" id="CNG-1l-GGA"/>
+                            <constraint firstItem="gIe-J9-Xra" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="87" id="H2O-RB-npe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gIe-J9-Xra" secondAttribute="bottom" constant="74" id="PEj-eg-w5S"/>
+                            <constraint firstItem="gIe-J9-Xra" firstAttribute="centerX" secondItem="JmC-mA-XSE" secondAttribute="centerX" id="TP8-GM-bqN"/>
+                            <constraint firstItem="pjg-fZ-6E1" firstAttribute="centerX" secondItem="MCM-O9-m2L" secondAttribute="centerX" id="e8e-5b-vOO"/>
+                            <constraint firstItem="gIe-J9-Xra" firstAttribute="top" secondItem="JmC-mA-XSE" secondAttribute="bottom" constant="66" id="j4a-tb-Y7x"/>
+                            <constraint firstItem="JmC-mA-XSE" firstAttribute="top" secondItem="MCM-O9-m2L" secondAttribute="bottom" constant="53" id="lC9-Qi-VTF"/>
+                            <constraint firstItem="pjg-fZ-6E1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="mV6-PG-Xzi"/>
+                            <constraint firstItem="MCM-O9-m2L" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="na0-KO-OUg"/>
+                            <constraint firstItem="pjg-fZ-6E1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="nam-RB-mcS"/>
+                            <constraint firstItem="MCM-O9-m2L" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vb3-cr-3HM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artistName" destination="MCM-O9-m2L" id="ihd-Yp-tsF"/>
+                        <outlet property="imageControl" destination="JmC-mA-XSE" id="uU1-Yt-0XD"/>
+                        <outlet property="loadedImage" destination="pjg-fZ-6E1" id="zVx-36-ymH"/>
+                        <outlet property="slider" destination="gIe-J9-Xra" id="aaW-4L-EPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="320"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="main" width="75" height="75"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
