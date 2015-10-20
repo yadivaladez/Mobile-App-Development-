@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-kn-URK">
+                                <rect key="frame" x="154" y="158" width="166" height="148"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="guM-aC-d7j" appends="YES" id="DUQ-ad-5hR"/>
+                                    <outletCollection property="gestureRecognizers" destination="iqn-dg-rut" appends="YES" id="fgA-QD-lZz"/>
+                                    <outletCollection property="gestureRecognizers" destination="wEj-JZ-E09" appends="YES" id="tbI-ko-eRh"/>
+                                    <outletCollection property="gestureRecognizers" destination="qHq-LF-XbH" appends="YES" id="Pe8-qy-RGW"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="guM-aC-d7j">
+                    <connections>
+                        <action selector="handlePan:" destination="vXZ-lx-hvc" id="9gN-n0-WdB"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="iqn-dg-rut">
+                    <connections>
+                        <action selector="handlePinch:" destination="vXZ-lx-hvc" id="mvV-py-FNS"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="wEj-JZ-E09">
+                    <connections>
+                        <action selector="handleRotate:" destination="vXZ-lx-hvc" id="WFo-f2-ZZv"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="qHq-LF-XbH">
+                    <connections>
+                        <action selector="handleLongPress:" destination="vXZ-lx-hvc" id="Qru-QT-Ysk"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="166" height="148"/>
+    </resources>
+</document>
